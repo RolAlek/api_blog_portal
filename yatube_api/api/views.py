@@ -1,4 +1,3 @@
-# TODO:  Напишите свой вариант
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.pagination import LimitOffsetPagination
 
@@ -15,3 +14,7 @@ class PostViewSet(ModelViewSet):
 
     def perform_create(self, serializer):
         return serializer.save(author=self.request.user)
+
+// TODO: вюсет для групп
+// TODO: вьюсет для коментариев
+// TODO: вюсет для подписок

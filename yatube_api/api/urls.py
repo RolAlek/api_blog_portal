@@ -5,6 +5,7 @@ from .views import PostViewSet
 
 router_v1 = DefaultRouter()
 router_v1.register('posts', PostViewSet)
+// TODO: роутеры для коментариев и групп + подписки
 
 urlpatterns = [
     path('v1/', include(router_v1.urls)),
