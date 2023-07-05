@@ -43,4 +43,11 @@ class Group(models.Model):
     def __str__(self) -> str:
         return self.title
 
-// TODO: модель подписок
+
+class Follow(models.Model):
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='follower'
+    )
+    following = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='following'
+    )
