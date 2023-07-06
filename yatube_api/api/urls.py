@@ -13,9 +13,8 @@ router_v1.register(
 )
 router_v1.register(prefix='follow', viewset=FollowViewSet, basename='follow')
 
-# TODO: jwt tokens
 urlpatterns = [
     path('v1/', include(router_v1.urls)),
     path('v1/', include('djoser.urls')),
-    path('v1/', include('djoser.urls.authtoken'))
+    path('v1/', include('djoser.urls.jwt'))
 ]
